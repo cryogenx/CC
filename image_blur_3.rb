@@ -59,7 +59,7 @@ image = Image.new([
 ])
 
 # ENTER BLUR DISTANCE BELOW
-image.blur(2)
+image.blur(5)
 puts "---"
 image.output_image
 puts "---"
