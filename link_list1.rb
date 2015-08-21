@@ -30,7 +30,15 @@ class Stack
     end
 
     # Pop an item off the stack.  
-    def pop(value)
+    def pop    	
+    	if @data.nil? 
+    		return nil
+    	else
+    		value = @data
+    		@data = @data.next_node
+
+    		return value
+    	end
     end
 
 end
@@ -42,7 +50,8 @@ def reverse_list(list)
         stack.push(list.value)
         list = list.next_node
     end
-    return stack.data
+
+    return stack.pop
 end
 
 node1 = LinkedListNode.new(37)
